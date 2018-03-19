@@ -26,6 +26,7 @@ export function doSomeAction() {
 you can write 
 
 ```typescript
+import { ActionWrapper } from 'redux-with-class';
 export default function(state: IState = initialState, wrapper: ActionWrapper): IProfileState {
     const action = wrapper.action;
     if (action instanceof SomeAction) {
