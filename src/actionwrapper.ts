@@ -1,5 +1,5 @@
 export interface ActionWrapper {
     type: string;
-    action: any;
+    action?: any;
   }
   
