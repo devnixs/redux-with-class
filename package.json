@@ -2,18 +2,18 @@
   "name": "redux-with-class",
   "version": "1.0.2",
   "description": "Dispatch class instances instead of plain objects and get better typescript static typing.",
-  "main": "umd/typescript-lib-starter.js",
+  "main": "umd/redux-with-class.js",
   "module": "lib/index.js",
   "es2015": "lib-esm/index.js",
   "typings": "typings/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devnixs/redux-with-class"
+    "url": "https://github.com/devnixs/redux-with-class",
   },
   "author": "Raphael ATALLAH",
   "license": "MIT",
   "engines": {
-    "node": ">=6.9"
+    "node": ">=6.9",
   },
   "scripts": {
     "cleanup": "shx rm -rf umd lib lib-esm lib-fesm typings coverage docs",
@@ -42,53 +42,43 @@
     "release:npm": "npm publish",
     "release:preflight": "irish-pub",
     "release:preflight:package": "npm pack",
-    "size": "shx echo \"Gzipped Size:\" && cross-var strip-json-comments --no-whitespace $npm_package_main | gzip-size"
+    "size": "shx echo \"Gzipped Size:\" && cross-var strip-json-comments --no-whitespace $npm_package_main | gzip-size",
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog",
     },
     "validate-commit-msg": {
       "types": "conventional-commit-types",
-      "maxSubjectLength": 120
-    }
+      "maxSubjectLength": 120,
+    },
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "npm run prettier:ts -- --write",
-      "ts:lint:fix",
-      "git add"
-    ]
+    "src/**/*.{ts,tsx}": ["npm run prettier:ts -- --write", "ts:lint:fix", "git add"],
   },
   "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
+    "roots": ["<rootDir>/src"],
     "transform": {
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js"],
     "mapCoverage": true,
     "coveragePathIgnorePatterns": [
       "<rootDir>/node_modules/",
       "<rootDir>/lib/",
       "<rootDir>/lib-esm/",
       "<rootDir>/umd/",
-      "<rootDir>/src/.*(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
+      "<rootDir>/src/.*(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     ],
     "coverageThreshold": {
       "global": {
         "branches": 80,
         "functions": 80,
         "lines": 80,
-        "statements": 85
-      }
-    }
+        "statements": 85,
+      },
+    },
   },
   "dependencies": {},
   "devDependencies": {
@@ -118,6 +108,6 @@
     "uglifyjs-webpack-plugin": "0.4.5",
     "validate-commit-msg": "2.12.2",
     "webpack": "3.0.0",
-    "webpack-config-utils": "2.3.0"
-  }
+    "webpack-config-utils": "2.3.0",
+  },
 }
