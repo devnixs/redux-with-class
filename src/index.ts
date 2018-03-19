@@ -1,0 +1,1 @@
+export { convertToPlainAction } from './middleware'
