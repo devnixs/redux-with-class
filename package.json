@@ -1,6 +1,6 @@
 {
   "name": "redux-with-class",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Dispatch class instances instead of plain objects and get better typescript static typing.",
   "main": "umd/typescript-lib-starter.js",
   "module": "lib/index.js",
