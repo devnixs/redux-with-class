@@ -1,2 +1,2 @@
-export { convertToPlainAction } from './middleware';
-export { ActionWrapper } from './actionwrapper';
+export { convertToPlainAction } from './middleware'
+export { ActionWrapper } from './actionwrapper'

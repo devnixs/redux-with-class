@@ -1,16 +1,16 @@
 {
-  "name": "@next-gen/typescript-lib-starter",
-  "version": "1.7.0",
-  "description": "TypeScript library setup for multiple compilation targets using tsc and webpack",
+  "name": "redux-with-class",
+  "version": "1.0.0",
+  "description": "Dispatch class instances instead of plain objects and get better typescript static typing.",
   "main": "umd/typescript-lib-starter.js",
   "module": "lib/index.js",
   "es2015": "lib-esm/index.js",
   "typings": "typings/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://www.github.com/Hotell/typescript-lib-starter"
+    "url": "https://github.com/devnixs/redux-with-class"
   },
-  "author": "Martin Hochel",
+  "author": "Raphael ATALLAH",
   "license": "MIT",
   "engines": {
     "node": ">=6.9"
@@ -35,8 +35,6 @@
     "verify": "npm test",
     "cz": "git-cz",
     "prettier:ts": "prettier --single-quote --print-width 120 --trailing-comma es5 --no-semi --parser typescript",
-    "precommit": "lint-staged",
-    "commitmsg": "validate-commit-msg",
     "prepush": "npm run ts:style && npm run test:only-changed",
     "prerelease": "npm run build",
     "release": "standard-version",
